@@ -2,8 +2,12 @@
 
 ## TODO
   - Remove NTP dependency if possible
-  - Log to console and not to a log file
+  - Log directly to the console and not to the console through tailing a log file
   - Reimplement in CentOS v7 for internal usage
+  - Insert environment variables from etcd
+  - Determine max RAM usage necessary for the container
+  - Determine setup procedure for failover collectors and document it
+  - Put the updated container on the Docker hub
 
 ## Overview
 Docker image capable of installing and running a LogicMonitor collector
