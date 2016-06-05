@@ -18,9 +18,10 @@ ExecStart=/usr/bin/docker \
   --env="password=<your-password>" \
   --env="description=LogicMonitor Collector (Primary)" \
   --env="cleanup=true" \
-  --hostname="logicmonitor-collector-01" \
+  --hostname="%n" \
   --memory="1g" \
-  --name="logicmonitor-collector-01" \
+  --name="%n" \
+  --rm \
   logicmonitor-collector:latest
 Slice=logicmonitor-collector.slice
 Nice=0
