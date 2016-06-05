@@ -16,14 +16,14 @@
     - See: [How do I get etcd values into my systemd service on CoreOS?](http://stackoverflow.com/questions/25396167/how-do-i-get-etcd-values-into-my-systemd-service-on-coreos)
   - Determine max RAM usage necessary for the container
     - Starting with 1GB
-      - [Adding collectors](http://www.logicmonitor.com/support/getting-started/i-just-signed-up-for-logicmonitor-now-what/3-adding-collectors/)
+      - From: [Adding collectors](http://www.logicmonitor.com/support/getting-started/i-just-signed-up-for-logicmonitor-now-what/3-adding-collectors/)
       - A minimum of 1GB of RAM (preferably 2GB if you plan to collect data from more than 100 devices). Note that as a rule of thumb, each collector is designed to efficiently monitor 100 - 200 devices.
   - Determine setup procedure for failover collectors and document it
     - [Collector Failover & Failback](http://help.logicmonitor.com/the-new-ui/settings/collectors/collector-failover-failback/)
     - [Do I need a Backup Collector?](http://help.logicmonitor.com/the-new-ui/settings/collectors/do-i-need-a-backup-collector/)
     - [Monitoring your Collector](http://www.logicmonitor.com/support/settings/collectors/monitoring-your-collector/)
   - Run as a non root user
-    - From [Installing a Linux Collector](http://www.logicmonitor.com/support/getting-started/i-just-signed-up-for-logicmonitor-now-what/3-adding-collectors/#Installing-a-Linux-Collector):
+    - From: [Installing a Linux Collector](http://www.logicmonitor.com/support/getting-started/i-just-signed-up-for-logicmonitor-now-what/3-adding-collectors/#Installing-a-Linux-Collector):
       - Under Linux/Unix environments, the collector is required to run as root. The primary reason for this requirement is because the collector services needs direct access to the networking stack for the ping collector to function properly. Note: /bin/ping is SUID root.
   - Put the updated container on the Docker hub
     - https://hub.docker.com/u/mywebgrocer/
