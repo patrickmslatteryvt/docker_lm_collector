@@ -25,6 +25,7 @@
   - Run as a non root user
     - From: [Installing a Linux Collector](http://www.logicmonitor.com/support/getting-started/i-just-signed-up-for-logicmonitor-now-what/3-adding-collectors/#Installing-a-Linux-Collector):
       - Under Linux/Unix environments, the collector is required to run as root. The primary reason for this requirement is because the collector services needs direct access to the networking stack for the ping collector to function properly. Note: /bin/ping is SUID root.
+      - Solution at: [RHEL / CentOS Linux 7 Enable Ping Access In Docker Container](http://www.cyberciti.biz/faq/unable-to-use-ping-in-centos-linux-rhel-7-docker-container/)
   - Put the updated container on the Docker hub
     - https://hub.docker.com/u/mywebgrocer/
 
