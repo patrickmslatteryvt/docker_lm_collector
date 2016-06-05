@@ -1,5 +1,10 @@
 # lm_collector
 
+## TODO
+  - Remove NTP dependency if possible
+  - Log to console and not to a log file
+  - Reimplement in CentOS v7 for internal usage
+
 ## Overview
 Docker image capable of installing and running a LogicMonitor collector
 
