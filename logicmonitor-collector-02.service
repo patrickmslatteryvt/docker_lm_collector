@@ -1,0 +1,31 @@
+[Unit]
+Description=LogicMonitor Collector Service (Secondary)
+After=docker.service
+
+[Service]
+Type=simple
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker stop --time="60" logicmonitor-collector-02
+ExecStartPre=-/usr/bin/docker rm logicmonitor-collector-02
+ExecStartPre=/usr/bin/docker pull logicmonitor-collector:latest
+ExecStart=/usr/bin/docker \
+  run \
+  --cpu-shares=2048 \
+  --env="TZ=America/New_York" \
+  --env="company=<your-company>" \
+  --env="username=<your-username>" \
+  --env="password=<your-password>" \
+  --env="description=LogicMonitor Collector (Secondary)" \
+  --env="cleanup=true" \
+  --hostname="logicmonitor-collector-02" \
+  --memory="1g" \
+  --name="logicmonitor-collector-02" \
+  logicmonitor-collector:latest
+Slice=logicmonitor-collector.slice
+Nice=0
+IOSchedulingClass=best-effort
+IOSchedulingPriority=0
+
+[Install]
+WantedBy=multi-user.target
